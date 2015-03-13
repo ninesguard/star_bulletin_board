@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--STAR Lab TV Digital Sign, announce page -->
+<!--version 1.0 -->
+<!--First "real world" experimentation with jQuery and JavaScript.  For TV digital sign at GMU STARLab. -->
+<!--Tested for Firefox, Google Chrome, and Safari on Windows 7 and Mac OSX (Does not work for Internet Explorer) -->
+<!--Crafted with love, care and dragons. By Taylor Nelson (Nine's Guard) -->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<link media="tv and (scan:progressive)">
+<title>STAR Lab TV Digital Sign</title>
+<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo+2:700,400,100,100italic,700italic,400italic' rel='stylesheet' type='text/css'>
+<script src="scripts/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body style="margin-left: 40px;">
+
+
+
+
+
+<!-- Starlab logo, edit as necessary -->
+<img src="img/tech_header.png" style="margin-top:100px; left: 0px;  z-index: -999;" alt="Starlab logo" />
+<div class="clock_date_announce">
+<div id="clock"></div><div id="ampm"></div><div id="date_clock"><div id="weekday"></div><div id="month"></div><div id="date"></div><div id="year"></div></div>
+</div>
+<!--Notice marquee, use for important messages, edit as necessary-->
+<div class="notice_large">
+All of the Video Macs will be wiped on Friday, October 24, 2014.  STAR Lab will not be open until 12:00pm on October 31, 2014.
+</div>
+
+
+<div style="background: white; padding: 10px 10px 10px 65px; margin-left: -60px; width: 100%;">
+<h1 style="color: red; margin: 30px; font-size: 39px"> Current announcements: </h1>
+<ul style="font-size: 39px; margin: 30px; font-weight: bold;">
+<li>All of the Video Macs will be wiped on Friday, October 24, 2014.  </li>
+<li>On October 31, 2014, STAR Lab will not be open until 12:00pm</li>
+</ul>
+</div>
+
+<!-- Used for development on another PC, please comment out when finished -->
+<div id="tv_margins"></div>
+
+<!-- Clock -->
+<!-- Clock widget -->
+<script src="scripts/clock.js"></script>
+<!-- Transition Script -->  
+<script>
+var $display_time = 30000; //Time in milliseconds to display each page.  This only applies per page.
+var $next_page = "tv.html";
+</script>
+<script src="scripts/rotate.js">
+</script>
+</body>
+</html>

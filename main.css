@@ -1,0 +1,689 @@
+/*
+Styling for STAR Lab digital sign 
+by Taylor Nelson (Nine's Guard) 
+*/
+
+
+/* Ctrl + F to change...
+  
+  -webkit-animation      -   Change the timing for the marquees.
+
+  */
+  
+body {
+    background:url("img/background.png");
+    font:12pt 'Exo 2';
+    margin:0;
+    padding:0
+}
+
+a {
+    color:#fff;
+    text-decoration:none
+}
+
+@font-face {
+    font-family:'weather';
+    src:url("w-font/weathericons-regular-webfont.eot");
+    src:url("w-font/weathericons-regular-webfont.eot?#iefix") format("embedded-opentype"),url("w-font/weathericons-regular-webfont.woff") format("woff"),url("w-font/weathericons-regular-webfont.ttf") format("truetype"),url("w-font/weathericons-regular-webfont.svg") format("svg");
+    font-weight:400;
+    font-style:normal
+}
+
+#weather {
+    width:350px;
+    padding:20px;
+    background:#590062;
+    border-radius:19px;
+    border:3px solid #bc14cb;
+    position:absolute;
+    top:49px;
+    left:1400px;;
+/* 33 pixel "padding" */
+    text-shadow:2px 2px 3px #000;
+    -webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75)
+}
+
+#weather i {
+    color:#fff;
+    font-family:weather;
+    font-size:60px;
+    font-weight:400;
+    font-style:normal;
+    float:left;
+    display:block;
+    width:150px;
+    text-align:center;
+    margin-top:50px
+}
+
+.icon-0:before {
+    content:"\f056"
+}
+
+.icon-1:before {
+    content:"\f073"
+}
+
+.icon-2:before {
+    content:"\f073"
+}
+
+.icon-3:before {
+    content:"\f01e"
+}
+
+.icon-4:before {
+    content:"\f01e"
+}
+
+.icon-5:before {
+    content:"\f017"
+}
+
+.icon-6:before {
+    content:"\f017"
+}
+
+.icon-7:before {
+    content:"\f017"
+}
+
+.icon-8:before {
+    content:"\f017"
+}
+
+.icon-9:before {
+    content:"\f019"
+}
+
+.icon-10:before {
+    content:"\f017"
+}
+
+.icon-11:before {
+    content:"\f01a"
+}
+
+.icon-12:before {
+    content:"\f01a"
+}
+
+.icon-13:before {
+    content:"\f01b"
+}
+
+.icon-14:before {
+    content:"\f01b"
+}
+
+.icon-15:before {
+    content:"\f01b"
+}
+
+.icon-16:before {
+    content:"\f01b"
+}
+
+.icon-17:before {
+    content:"\f015"
+}
+
+.icon-18:before {
+    content:"\f017"
+}
+
+.icon-19:before {
+    content:"\f014"
+}
+
+.icon-20:before {
+    content:"\f014"
+}
+
+.icon-21:before {
+    content:"\f014"
+}
+
+.icon-22:before {
+    content:"\f014"
+}
+
+.icon-23:before {
+    content:"\f014"
+}
+
+.icon-24:before {
+    content:"\f021"
+}
+
+.icon-25:before {
+    content:"\f021"
+}
+
+.icon-26:before {
+    content:"\f013"
+}
+
+.icon-27:before {
+    content:"\f031"
+}
+
+.icon-28:before {
+    content:"\f002"
+}
+
+.icon-29:before {
+    content:"\f031"
+}
+
+.icon-30:before {
+    content:"\f002"
+}
+
+.icon-31:before {
+    content:"\f02e"
+}
+
+.icon-32:before {
+    content:"\f00d"
+}
+
+.icon-33:before {
+    content:"\f083"
+}
+
+.icon-34:before {
+    content:"\f002"
+}
+
+.icon-35:before {
+    content:"\f015"
+}
+
+.icon-36:before {
+    content:"\f072"
+}
+
+.icon-37:before {
+    content:"\f01e"
+}
+
+.icon-38:before {
+    content:"\f01e"
+}
+
+.icon-39:before {
+    content:"\f01e"
+}
+
+.icon-40:before {
+    content:"\f01a"
+}
+
+.icon-41:before {
+    content:"\f01b"
+}
+
+.icon-42:before {
+    content:"\f01b"
+}
+
+.icon-43:before {
+    content:"\f01b"
+}
+
+.icon-44:before {
+    content:"\f083"
+}
+
+.icon-45:before {
+    content:"\f01e"
+}
+
+.icon-46:before {
+    content:"\f01b"
+}
+
+.icon-47:before {
+    content:"\f01e"
+}
+
+#weather h2 {
+    color:#fff;
+    font-size:66px;
+    font-weight:lighter;
+    margin:0;
+    padding:0
+}
+
+#weather #weather_text {
+    text-align:left;
+    font:30px "Exo 2";
+    font-weight:lighter;
+    color:#fff;
+    padding:20px;
+    text-transform:capitalize
+}
+
+#weather .currently {
+    margin:0 20px
+}
+
+#feed_container {
+    height:545px;
+    width:300px;
+    overflow:hidden;
+    top:447px;
+    left:1284px;
+    position:absolute;
+    background:url("img/feed_back.png");
+    border-radius:19px;
+    border:3px solid #27700b;
+    padding:20px
+}
+
+#feed_a {
+    animation:marquee 99s linear infinite;
+    top:0;
+    position:relative;
+    box-sizing:border-box;
+    -webkit-animation:marquee 99s linear infinite;
+/*CSS YOU'RE SO OP */
+    animation:marquee 99s linear infinite;
+/*CSS YOU'RE SO OP */
+    z-index:10
+}
+
+#twitter-header h3 {
+    display:inline
+}
+
+#twitter-header h2,h3 {
+    font-weight:lighter!important
+}
+
+#twitter-container {
+    height:700px;
+    width:350px;
+    overflow:hidden;
+    background:#1d4b51;
+    position:absolute;
+    top:49px;
+/*-33 pixels */
+    left:903px;
+    border-radius:19px;
+    border:3px solid #19b2c9;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-top:20px;
+    -webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75)
+}
+
+#twitter-feed {
+    top:0;
+    position:relative;
+    box-sizing:border-box;
+    -webkit-animation:marquee 99s linear infinite;
+/*CSS YOU'RE SO OP */
+    animation:marquee 99s linear infinite;
+/*CSS YOU'RE SO OP */
+    z-index:10
+}
+
+
+
+#hours_back {
+    padding:10px;
+    background:#fff;
+    border-radius:19px;
+    width:400px;
+    padding-left:6px;
+    padding-right:6px;
+    padding-top:10px;
+    padding-bottom:6px;
+    position:absolute;
+    top:820px;
+    left:895px;
+    box-shadow:3px 3px 8px #151515
+}
+
+#hours {
+    border-radius:19px;
+    background:#9A2222;
+    border:3px #9a2222 solid;
+    text-align:center;
+    padding:11px;
+	font-weight: bold;
+}
+
+#hours table {
+    width:100%
+}
+
+#hours td {
+    font-size:155%;
+	background: white;
+	border-radius: 3px;
+	text-align: left;
+}
+
+#hours h1 {
+    margin:0;
+	font-size:225%;
+	font-weight: bolder;
+	color: white;
+}
+
+.clock_date, .clock_date_announce {
+padding-left:50px;
+    padding-right:50px;
+    padding-top:35px;
+    padding-bottom:35px;
+    color:#fff;
+    border-radius:19px;
+    background:url("img/clock_back.png");
+    text-shadow:2px 2px 3px #000;
+    -webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+}
+
+.clock_date_announce {
+	width:665px;
+	display: inline-block;
+	margin-left: 300px;
+}
+
+.clock_date {
+    position:absolute;
+    top:828px;
+    left:70px;
+    width:665px;
+}
+
+.forecast {
+    color:#fff;
+    display:table-cell;
+    width:30px;
+    text-align:center;
+    font-weight:lighter;
+    font-size:20px
+}
+
+.forecast i {
+    font-size:38px!important;
+    display:table-cell!important;
+    padding-top:13px;
+    padding-bottom:19px;
+    height:45px!important;
+    vertical-align:top;
+    top:0!important;
+    text-align:center!important;
+    float:none!important;
+    position:static!important;
+
+}
+
+.high_tmp,.low_tmp {
+    display:inline;
+    padding:5px
+}
+
+.low_tmp {
+    opacity:.6
+}
+
+.day {
+    font-size:24px
+}
+
+#weather_forecast {
+    width:100%;
+    display:table;
+    padding-top:5px
+}
+
+#clock,#ampm,#weekday,#month,#date,#year {
+}
+
+#clock, #clock_announce {
+    font-size:110px;
+    float:left
+}
+
+#ampm {
+    font-size:32px;
+    width:32px;
+    float:left
+}
+
+#date {
+    padding-left:10px
+}
+
+#month,#date {
+    display:inline!important
+}
+
+#weekday,#month,#date,#year {
+    font-size:38px;
+    text-align:left;
+    display:block
+}
+
+#date_clock {
+    float:left;
+    padding-left:90px
+}
+
+#twitter-club-back-header {
+    margin-top:-24px;
+    display:block;
+    height:90px;
+    padding-top:20px;
+    background:#1c4e08;
+    color:#fff;
+    z-index:999;
+    position:relative;
+    -moz-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
+    -webkit-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
+    box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9)
+}
+
+#twitter-club-back-header h2 {
+    margin:0;
+    font-weight:400!important
+}
+
+#twitter-club-header h3 {
+    display:inline
+}
+
+#twitter-club-header h2,h3 {
+    font-weight:lighter!important
+}
+
+#twitter-club-container {
+    height:545px;
+    width:350px;
+    overflow:hidden;
+    background:#1c4e08;
+    position:absolute;
+    top:447px;
+    left:1400px;
+    border-radius:19px;
+    border:3px solid #5BB03A;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+    padding-top:20px;
+    -webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75)
+}
+
+#twitter-club-feed {
+    top:0;
+    position:relative;
+    box-sizing:border-box;
+    -webkit-animation:marquee 99s linear infinite;  /* Change both -webkit-animation and animation to be the same */
+    animation:marquee 99s linear infinite; /* From time to time, you may need to change the timing to slow it down or speed it up */
+    z-index:10;
+}
+
+#twitter-back-header {
+    margin-top:-24px;
+    display:block;
+    height:90px;
+    padding-top:20px;
+    background:#1d4b51;
+    color:#fff;
+    z-index:999;
+    position:relative;
+    -moz-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
+    -webkit-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
+    box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9)
+}
+
+#twitter-back-header h2 {
+    margin:0;
+    font-weight:400!important
+}
+
+#twitter-back-header h3 {
+}
+
+#sticky_a,#sticky_b {
+    height:260px;
+    width:290px;
+    position:relative;
+    padding:10px;
+    margin:20px;
+    font-family:'Gloria Hallelujah',cursive
+}
+
+#sticky_a p,#sticky_b p {
+    margin:0;
+    padding:0;
+    line-height:auto;
+    font-size:21px
+}
+
+#sticky_a {
+    background:url("img/green_sticky.png");
+    background-repeat:repeat-x;
+    box-shadow:3px 3px 8px #151515;
+    display:block;
+    position:absolute;
+    left:92px;
+    top:470px;
+/*rotate sticky */
+    -ms-transform:rotate(1deg);
+/* IE 9 */
+    -webkit-transform:rotate(1deg);
+/* Chrome, Safari, Opera */
+    transform:rotate(1deg);
+    -webkit-backface-visibility:hidden;
+}
+
+.notice,.notice_large {
+    background:#000;
+    border-radius:19px;
+    top:340px;
+	left: 70px;
+    border:3px solid #fff;
+    font-size:63px;
+    width:765px;
+    -webkit-animation:horizontal_marquee 30s linear infinite; /* Again, should be identical to the animation property */
+    animation:horizontal_marquee 30s linear infinite; /* You can adjust the timing on here as well */
+    white-space:nowrap;
+    overflow:hidden;
+    color:red;
+    position:absolute
+}
+
+/* Make it move! */
+/* You will never need to change the spacing of the marquee */
+@keyframes marquee {
+0% {
+    top:50px
+}
+
+100% {
+    top:-4400px
+}
+}
+
+@-webkit-keyframes marquee {
+0% {
+    top:50px
+}
+
+100% {
+    top:-4400px
+}
+}
+
+/* You may, however, need to edit this from time to time */
+@keyframes horizontal_marquee {
+0% {
+    text-indent:13.5em
+}
+
+100% {
+    text-indent:-53.5em
+}
+}
+
+@-webkit-keyframes horizontal_marquee {
+0% {
+    text-indent:13.5em
+}
+
+100% {
+    text-indent:-53.5em
+}
+}
+
+.notice_large {
+	margin-top: 40px;
+    margin-bottom: 40px;
+    font-size:109px;
+    padding:20px;
+    width:95%;
+    position:relative !important;
+	left: 0;
+	top: 0;
+}
+
+#sticky_b {
+    background:url("img/yellow_sticky.png");
+    background-repeat:repeat-x;
+    display:block;
+    box-shadow:3px 3px 8px #151515;
+    position:absolute;
+    left:487px;
+    top:470px;
+/*rotate sticky */
+    -ms-transform:rotate(-3deg);
+/* IE 9 */
+    -webkit-transform:rotate(-3deg);
+/* Chrome, Safari, Opera */
+    transform:rotate(-3deg);
+    -webkit-backface-visibility:hidden
+}
+
+#tv_margins {
+position: absolute;
+top: 30px;
+left: 40px;
+height: 1020px;
+width: 1850px;
+border: red solid 1px;
+}

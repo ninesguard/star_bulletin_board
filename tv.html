@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--STAR Lab TV Digital Sign -->
+<!--version 1.0 -->
+<!--First "real world" experimentation with jQuery and JavaScript.  For TV digital sign at GMU STARLab. -->
+<!--Tested for Firefox, Google Chrome, and Safari on Windows 7 and Mac OSX (Does not work for Internet Explorer) -->
+<!--Crafted with love, care and dragons. By Taylor Nelson (Nine's Guard) -->
+
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1080">
+<title>STAR Lab TV Digital Sign</title>
+<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo+2:700,400,100,100italic,700italic,400italic' rel='stylesheet' type='text/css'>
+<script src="scripts/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="main.css">
+
+</head>
+<body>
+
+<!--Notice marquee, use for important messages, edit as necessary-->
+<div class="notice">
+All of the Video Macs will be wiped on Friday, October 24, 2014.  STAR Lab will not be open until 12:00pm on October 31, 2014.
+</div>
+
+
+<!-- Starlab logo, edit as necessary -->
+<img src="img/starlab_header.png" style="top: 60px; left: 0px; position: absolute;" alt="Starlab logo" />
+
+
+
+
+<!--Hours, edit as needed-->
+<div id="hours_back">
+<div id="hours">
+<h1 style="text-decoration: underline;">Hours of operation:</h1>
+<table>
+<tr><td>Mon - Thurs:</td><td>10am - 10pm</td></tr>
+<tr><td>Friday:</td><td>10am - 6pm</td></tr>
+<tr><td>Saturday:</td><td>Closed</td></tr>
+<tr><td>Sunday:</td><td>12pm - 6pm</td></tr>
+</table>
+</div>
+</div>
+
+<!--Sticky note, edit as needed-->
+<div id="sticky_a">
+<p style="font-size: 21px;">Reserve equipment ONLINE</p>
+<p style="font-size: 29px; color: red;">gmu.webcheckout.net</p>
+<p style="font-size: 22px;">or give us a call:</p>
+<p style="color: red; font-size: 41px;">703-993-8990</p>
+</div>
+<!--Sticky note, edit as needed-->
+<div id="sticky_b">
+<p style="font-size: 23px;">Our lab supports:</p>
+<p style="font-size: 23px; color: blue;">
+Photoshop, Dreamweaver, Premiere, Flash, Final Cut Pro X,
+ Avid, 3Ds Max, Unity, UDK, Maya, Audacity, and more!</p>
+</div>
+
+<!--
+If you want to make your own sticky note with more notes, 
+simply make a div with the id "sticky_a" or "sticky_b" (green and yellow background, respectively)
+-->
+
+<!-- CLUB Twitter Feed, DO NOT EDIT CONTAINING DIVS-->
+<div id="twitter-club-container">
+<div id="twitter-club-back-header">
+<div id="twitter-club-header"><img src="img/club.png" style="float: left; width: 76px; padding-right: 15px;" alt="starlab logo" /><h3>Tweets by <img src="https://g.twimg.com/Twitter_logo_white.png" style="width: 22px; height: 22px; float: right;" alt="twitter logo" /></h3><h2>@CLUBGMU</h2></div>
+</div>
+<div id="twitter-club-feed" >
+            <a class="twitter-timeline"  
+			href="https://twitter.com/CLUBGMU" 
+			data-dnt="true"
+width="345"
+height="10000"
+data-chrome="noheader noborders noscrollbar nofooter transparent" 
+			data-widget-id="524285797730500608">Tweets by @CLUBGMU</a>
+            <script src="scripts/twitter.js"></script>
+</div>
+</div>          
+
+
+<!--Clock, DO NOT EDIT -->
+<div class="clock_date">
+<div id="clock"></div><div id="ampm"></div><div id="date_clock"><div id="weekday"></div><div id="month"></div><div id="date"></div><div id="year"></div></div>
+</div>
+
+
+<!-- STAR Lab Twitter Feed, edit "twitter-timeline" as necessary.  -->
+<div id="twitter-container">
+<div id="twitter-back-header">
+<div id="twitter-header"><img src="img/starlab.png" style="float: left; width: 76px; padding-right: 15px;" alt="starlab logo" /><h3>Tweets by <img src="https://g.twimg.com/Twitter_logo_white.png" style="width: 22px; height: 22px; float: right;" alt="twitter logo" /></h3><h2>@MasonSTARLab</h2></div>
+</div>
+<div id="twitter-feed" >
+<a class="twitter-timeline" 
+data-dnt="true"
+width="345"
+height="10000"
+data-chrome="noheader noborders noscrollbar nofooter transparent"  
+href="https://twitter.com/MasonSTARLab" 
+data-widget-id="513334187860832257"
+>Tweets by @MasonSTARLab</a>
+<!--Twitter script-->
+<script src="scripts/twitter.js"></script>
+</div>
+</div>
+
+<!--Weather, DO NOT EDIT-->
+<div id="weather">
+</div>
+
+<!--BEGIN SCRIPTS -->
+
+<!-- Transition Script -->  
+<script>
+var $display_time = 30000; //Time in milliseconds to display each page.  This only applies per page.
+var $next_page = "announce.html";
+</script>
+<script src="scripts/rotate.js">
+</script>
+
+<!-- Used for development on another PC, please comment out when finished -->
+<!-- <div id="tv_margins"></div> -->
+
+<!--JQuery Twitter Widget Stylization-->
+<!--found here: http://www.lukeharrison.net/blog/styling-your-twitter-widget/-->
+<!--Modified by Nine's Guard-->
+<script src="scripts/stylize.twitter.js"></script>
+
+
+<!-- Weather Widget -->
+<script src="scripts/jquery.simpleWeather.min.js"></script>
+<script>
+$(document).ready(function() {  
+  getWeather(); //Get the initial weather.
+  setInterval(getWeather, 600000); //Update the weather every 10 minutes.
+});
+function getWeather() {
+  $.simpleWeather({
+    location: 'Fairfax, VA',
+    unit: 'f',
+    success: function(weather) {
+	  
+      html = '<i class="icon-'+weather.code+'"></i>';
+      html += '<div id="weather_text"><h2>'+weather.temp+'&deg;</h2>'+weather.city+', '+weather.region+'</div>';
+	  html += '<div id="weather_forecast">';
+	  for (var i=1;i<weather.forecast.length;i++) {
+		html += '<div class="forecast"><div class="day">'+weather.forecast[i].day+'</div><i class="icon-'+weather.forecast[i].code+'"></i><div class="high_tmp">'+weather.forecast[i].high+'&deg;</div>/<div class="low_tmp">'+weather.forecast[i].low+'&deg;</div></div>';
+      }
+	  html += '</div>';
+	
+	  $("#weather").html(html);
+	  
+    },
+    error: function(error) {
+      $("#weather").html('<p>'+error+'</p>');
+    }
+  });
+}
+</script>
+
+<!-- Clock widget -->
+<script src="scripts/clock.js"></script>
+</body>
+</html>
