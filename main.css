@@ -679,6 +679,7 @@ padding-left:50px;
     -webkit-backface-visibility:hidden
 }
 
+/* Actual TV size, this will display a red border in the actual viewable area. */
 #tv_margins {
 position: absolute;
 top: 30px;
