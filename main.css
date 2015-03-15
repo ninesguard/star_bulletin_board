@@ -700,3 +700,14 @@ height: 1020px;
 width: 1850px;
 border: red solid 1px;
 }
+#announce_logo {
+margin-top:100px; left: 0px;  z-index: -999;}
+
+#announcements {
+background: white; padding: 10px 10px 10px 65px; margin-left: -60px; width: 100%;
+}
+#announcements h1 {
+color: red; margin: 30px; font-size: 39px}
+#announcements ul {
+font-size: 39px; margin: 30px; font-weight: bold;
+}
