@@ -679,6 +679,18 @@ padding-left:50px;
     -webkit-backface-visibility:hidden
 }
 
+#logo{
+top: 60px; left: 0px; position: absolute;
+}
+#hours h1 {
+text-decoration: underline;
+}
+.twitter_feed_icon{
+float: left; width: 76px; padding-right: 15px;
+}
+.twitter_logo{
+width: 22px; height: 22px; float: right;
+}
 /* Actual TV size, this will display a red border in the actual viewable area. */
 #tv_margins {
 position: absolute;
