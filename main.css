@@ -702,7 +702,9 @@ border: red solid 1px;
 }
 #announce_logo {
 margin-top:100px; left: 0px;  z-index: -999;}
-
+#announcements_page {
+margin-left: 40px;
+}
 #announcements {
 background: white; padding: 10px 10px 10px 65px; margin-left: -60px; width: 100%;
 }
