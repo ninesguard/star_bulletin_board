@@ -24,17 +24,16 @@
 <div id="clock"></div><div id="ampm"></div><div id="date_clock"><div id="weekday"></div><div id="month"></div><div id="date"></div><div id="year"></div></div>
 </div>
 <!--Notice marquee, use for important messages, edit as necessary-->
-<div class="notice_large">
-All of the Video Macs will be wiped on Friday, October 24, 2014.  STAR Lab will not be open until 12:00pm on October 31, 2014.
+<div class="notice_large" id="marquee">
 </div>
 
 
-<div id="announcements">
+<div id="announcements"><!--
 <h1> Current announcements: </h1>
 <ul >
 <li>All of the Video Macs will be wiped on Friday, October 24, 2014.  </li>
 <li>On October 31, 2014, STAR Lab will not be open until 12:00pm</li>
-</ul>
+</ul>-->
 </div>
 
 <!-- Used for development on another PC, please comment out when finished -->
@@ -47,6 +46,10 @@ All of the Video Macs will be wiped on Friday, October 24, 2014.  STAR Lab will 
 <script>
 var $display_time = 30000; //Time in milliseconds to display each page.  This only applies per page.
 var $next_page = "tv.html";
+</script>
+<script>
+document.getElementById("marquee").innerHTML = localStorage.getItem("marquee");
+document.getElementById("announcements").innerHTML = localStorage.getItem("announcements");
 </script>
 <script src="scripts/rotate.js">
 </script>
