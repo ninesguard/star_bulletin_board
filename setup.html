@@ -4,22 +4,64 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>Setup TV Digital Sign</title>
+
+<script>
+<!-- 
+
+function start() {
+document.getElementById("btnSaveRun").addEventListener("click", saveRun, false);
+document.getElementById("btnRecover").addEventListener("click", recover, false);
+}
+
+function saveRun() {
+localStorage.setItem("marquee", document.getElementById("marquee").value);
+localStorage.setItem("background", document.getElementById("background").value);
+localStorage.setItem("postit1", document.getElementById("postit1").value);
+localStorage.setItem("postit2", document.getElementById("postit2").value);
+localStorage.setItem("announcements", document.getElementById("announcements").value);
+}
+
+window.addEventListener("load", start, false); //add Event listener for this window, called start
+</script>
 </head>
 
 <body>
+<h1>Setup STARLab Digisign</h1>
+<fieldset>
+<legend>Global</legend>
 <form method="post" action="">
-Announcements (displayed in big red letters on tv.html and announcements.html)<br>
-<input name="announcements" type="text" /><br><br>
+Scrolling Marquee Messages<br>
+<input id="marquee" name="marquee" type="text" /><br><br>
+Background<br>
+<input id="background" name="background" type="text" /><br><br>
+</fieldset>
 
+<fieldset>
+<legend>Media page</legend>
 Post-It 1 (green)<br>
-<input name="postit1" type="text" /><br><br>
+<textarea id="postit1" name="postit1" type="text" ></textarea><br><br>
 
 Post-It 2 (yellow)<br>
-<input name="postit2" type="text" /><br><br>
+<textarea id="postit2" name="postit2" type="text" /></textarea><br><br>
 
-Post-It 2 (yellow)<br>
-<input name="postit2" type="text" /><br><br>
+Hours of operation<br>
+<table>
+<tr><td>Mon - Thurs:</td><td>10am - 10pm</td></tr>
+<tr><td>Friday:</td><td>10am - 6pm</td></tr>
+<tr><td>Saturday:</td><td>Closed</td></tr>
+<tr><td>Sunday:</td><td>12pm - 6pm</td></tr>
+</table>
+</fieldset>
 
+<fieldset>
+<legend>Announcement page</legend>
+Announcements<br>
+<textarea id="announcements" name="announcements" type="text" /></textarea><br><br>
+</fieldset>
+
+
+<input type="button" value="Save and run" id="btnSaveRun" />
+<input type="button" value="Recover" id="btnRecover" />
 </form>
 </body>
 
