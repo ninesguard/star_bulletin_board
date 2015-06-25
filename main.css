@@ -401,20 +401,32 @@ padding-left:50px;
     -webkit-backface-visibility:hidden;
 }
 
-.notice,.notice_large {
-    background:#000;
-    border-radius:19px;
-    top:340px;
+.notice, .notice_large {
+	width:765px;
+	top:340px;
 	left: 70px;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	background:#000;
+    border-radius:19px;
+    
     border:3px solid #fff;
     font-size:63px;
-    width:765px;
-    -webkit-animation:horizontal_marquee 30s linear infinite; /* Again, should be identical to the animation property */
-    animation:horizontal_marquee 30s linear infinite; /* You can adjust the timing on here as well */
-    white-space:nowrap;
-    overflow:hidden;
-    color:red;
-    position:absolute
+	
+}
+
+.notice div,.notice_large div{
+
+}
+
+.notice span, .notice_large span {
+	display: inline-block;
+	padding-left: 100%;
+	color:red;
+	text-indent: 0;
+	animation: horizontal_marquee 15s linear infinite; /* You can adjust the timing on here as well */
+	-webkit-animation: horizontal_marquee 15s linear infinite; 
 }
 
 /* Make it move! */
@@ -442,21 +454,21 @@ padding-left:50px;
 /* You may, however, need to edit this from time to time */
 @keyframes horizontal_marquee {
 0% {
-    text-indent:13.5em
+    transform: translate(0, 0);
 }
 
 100% {
-    text-indent:-53.5em
+    transform: translate(-100%, 0);
 }
 }
 
 @-webkit-keyframes horizontal_marquee {
 0% {
-    text-indent:13.5em
+    -webkit-transform: translate(0, 0);
 }
 
 100% {
-    text-indent:-53.5em
+    -webkit-transform: translate(0, 0);
 }
 }
 

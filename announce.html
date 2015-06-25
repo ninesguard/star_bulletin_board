@@ -24,7 +24,8 @@
 <div id="clock"></div><div id="ampm"></div><div id="date_clock"><div id="weekday"></div><div id="month"></div><div id="date"></div><div id="year"></div></div>
 </div>
 <!--Notice marquee, use for important messages, edit as necessary-->
-<div class="notice_large" id="marquee">
+<div class="notice_large" >
+<span id="marquee"></span>
 </div>
 
 
@@ -44,7 +45,7 @@
 <script src="scripts/clock.js"></script>
 <!-- Transition Script -->  
 <script>
-var $display_time = 30000; //Time in milliseconds to display each page.  This only applies per page.
+var $display_time = localStorage.getItem("announce_timer") * 1000;; //Time in milliseconds to display each page.  This only applies per page.
 var $next_page = "tv.html";
 </script>
 <script>

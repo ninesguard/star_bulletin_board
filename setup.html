@@ -11,6 +11,31 @@
 function start() {
 document.getElementById("btnSaveRun").addEventListener("click", saveRun, false);
 document.getElementById("btnRecover").addEventListener("click", recover, false);
+document.getElementById("btnRecoverFromFile").addEventListener("click", recoverFile, false);
+
+recover();
+
+}
+
+function recoverFile() {
+}
+
+function recover() {
+document.getElementById("marquee").value = localStorage.getItem("marquee");
+document.getElementById("background").value = localStorage.getItem("background");
+document.getElementById("postit1").value = localStorage.getItem("postit1");
+document.getElementById("postit2").value = localStorage.getItem("postit2");
+document.getElementById("announcements").value = localStorage.getItem("announcements");
+document.getElementById("c1r1").value = localStorage.getItem("c1r1");
+document.getElementById("c1r2").value = localStorage.getItem("c1r2");
+document.getElementById("c1r3").value = localStorage.getItem("c1r3");
+document.getElementById("c1r4").value = localStorage.getItem("c1r4");
+document.getElementById("c2r1").value = localStorage.getItem("c2r1");
+document.getElementById("c2r2").value = localStorage.getItem("c2r2");
+document.getElementById("c2r3").value = localStorage.getItem("c2r3");
+document.getElementById("c2r4").value = localStorage.getItem("c2r4");
+document.getElementById("media_timer").value = localStorage.getItem("media_timer");
+document.getElementById("announce_timer").value = localStorage.getItem("announce_timer");
 }
 
 function saveRun() {
@@ -19,6 +44,18 @@ localStorage.setItem("background", document.getElementById("background").value);
 localStorage.setItem("postit1", document.getElementById("postit1").value);
 localStorage.setItem("postit2", document.getElementById("postit2").value);
 localStorage.setItem("announcements", document.getElementById("announcements").value);
+localStorage.setItem("c1r1", document.getElementById("c1r1").value);
+localStorage.setItem("c1r2", document.getElementById("c1r2").value);
+localStorage.setItem("c1r3", document.getElementById("c1r3").value);
+localStorage.setItem("c1r4", document.getElementById("c1r4").value);
+localStorage.setItem("c2r1", document.getElementById("c2r1").value);
+localStorage.setItem("c2r2", document.getElementById("c2r2").value);
+localStorage.setItem("c2r3", document.getElementById("c2r3").value);
+localStorage.setItem("c2r4", document.getElementById("c2r4").value);
+localStorage.setItem("media_timer", document.getElementById("media_timer").value);
+localStorage.setItem("announce_timer", document.getElementById("announce_timer").value);
+window.location.href = 'tv.html';
+
 }
 
 window.addEventListener("load", start, false); //add Event listener for this window, called start
@@ -38,6 +75,9 @@ Background<br>
 
 <fieldset>
 <legend>Media page</legend>
+Timer (in seconds) for page<br>
+<input type="number" id="media_timer" min="1" max="999" value="30"/><br><br>
+
 Post-It 1 (green)<br>
 <textarea id="postit1" name="postit1" type="text" ></textarea><br><br>
 
@@ -46,15 +86,17 @@ Post-It 2 (yellow)<br>
 
 Hours of operation<br>
 <table>
-<tr><td>Mon - Thurs:</td><td>10am - 10pm</td></tr>
-<tr><td>Friday:</td><td>10am - 6pm</td></tr>
-<tr><td>Saturday:</td><td>Closed</td></tr>
-<tr><td>Sunday:</td><td>12pm - 6pm</td></tr>
+<tr><td><input id="c1r1" type="text" /></td><td><input id="c2r1" type="text" /></td></tr>
+<tr><td><input id="c1r2" type="text" /></td><td><input id="c2r2" type="text" /></td></tr>
+<tr><td><input id="c1r3" type="text" /></td><td><input id="c2r3" type="text" /></td></tr>
+<tr><td><input id="c1r4" type="text" /></td><td><input id="c2r4" type="text" /></td></tr>
 </table>
 </fieldset>
 
 <fieldset>
 <legend>Announcement page</legend>
+Timer (in seconds) for page<br>
+<input type="number" id="announce_timer" min="1" max="999" value="30"/><br><br>
 Announcements<br>
 <textarea id="announcements" name="announcements" type="text" /></textarea><br><br>
 </fieldset>
@@ -62,6 +104,7 @@ Announcements<br>
 
 <input type="button" value="Save and run" id="btnSaveRun" />
 <input type="button" value="Recover" id="btnRecover" />
+<input type="button" value="Recover from file..." id="btnRecoverFromFile" />
 </form>
 </body>
 
