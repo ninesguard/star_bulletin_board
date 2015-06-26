@@ -4,7 +4,9 @@
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 <title>Setup TV Digital Sign</title>
-
+<link href="scripts/jquery-te-1.4.0.css" rel="stylesheet" type="text/css"></link>
+<script src="scripts/jquery-2.1.3.min.js"></script>
+<script src="scripts/jquery-te-1.4.0.min.js"></script>
 <script>
 <!-- 
 
@@ -79,10 +81,10 @@ Timer (in seconds) for page<br>
 <input type="number" id="media_timer" min="1" max="999" value="30"/><br><br>
 
 Post-It 1 (green)<br>
-<textarea id="postit1" name="postit1" type="text" ></textarea><br><br>
+<textarea id="postit1" class="jqte-editor" name="postit1" type="text" ></textarea><br><br>
 
 Post-It 2 (yellow)<br>
-<textarea id="postit2" name="postit2" type="text" /></textarea><br><br>
+<textarea id="postit2" class="jqte-editor" name="postit2" type="text" /></textarea><br><br>
 
 Hours of operation<br>
 <table>
@@ -98,13 +100,23 @@ Hours of operation<br>
 Timer (in seconds) for page<br>
 <input type="number" id="announce_timer" min="1" max="999" value="30"/><br><br>
 Announcements<br>
-<textarea id="announcements" name="announcements" type="text" /></textarea><br><br>
+<textarea class="jqte-editor" id="announcements" name="announcements" type="text" ></textarea><br><br>
 </fieldset>
 
 
 <input type="button" value="Save and run" id="btnSaveRun" />
 <input type="button" value="Recover" id="btnRecover" />
 <input type="button" value="Recover from file..." id="btnRecoverFromFile" />
+<script>
+$('.jqte-editor').jqte();
+
+var jqteStatus = true;
+$(".status").click(function()
+	{
+		jqteStatus = jqteStatus ? false : true;
+		$('.jqte-test').jqte({"status" : jqteStatus})
+	})
+</script>
 </form>
 </body>
 
