@@ -11,9 +11,10 @@
 <!-- 
 
 function start() {
-document.getElementById("btnSaveRun").addEventListener("click", saveRun, false);
+document.getElementById("btnSave").addEventListener("click", save, false);
 document.getElementById("btnRecover").addEventListener("click", recover, false);
 document.getElementById("btnRecoverFromFile").addEventListener("click", recoverFile, false);
+document.getElementById("btnRun").addEventListener("click", run, false);
 
 recover();
 
@@ -40,7 +41,7 @@ document.getElementById("media_timer").value = localStorage.getItem("media_timer
 document.getElementById("announce_timer").value = localStorage.getItem("announce_timer");
 }
 
-function saveRun() {
+function save() {
 localStorage.setItem("marquee", document.getElementById("marquee").value);
 localStorage.setItem("background", document.getElementById("background").value);
 localStorage.setItem("postit1", document.getElementById("postit1").value);
@@ -56,8 +57,11 @@ localStorage.setItem("c2r3", document.getElementById("c2r3").value);
 localStorage.setItem("c2r4", document.getElementById("c2r4").value);
 localStorage.setItem("media_timer", document.getElementById("media_timer").value);
 localStorage.setItem("announce_timer", document.getElementById("announce_timer").value);
-window.location.href = 'tv.html';
 
+}
+
+function run() {
+window.location.href = 'tv.html';
 }
 
 window.addEventListener("load", start, false); //add Event listener for this window, called start
@@ -104,7 +108,8 @@ Announcements<br>
 </fieldset>
 
 
-<input type="button" value="Save and run" id="btnSaveRun" />
+<input type="button" value="Save" id="btnSave" />
+<input type="button" value="Run" id="btnRun" />
 <input type="button" value="Recover" id="btnRecover" />
 <input type="button" value="Recover from file..." id="btnRecoverFromFile" />
 <script>

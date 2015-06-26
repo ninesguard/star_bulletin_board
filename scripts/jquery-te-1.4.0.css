@@ -6,13 +6,21 @@
  * jQuery TE is provided under the MIT LICENSE.
  *
 */
+input:focus, input:hover {
+border-color: red;
+}
+
+input {
+border: #999 1px solid;
+padding: 2px;
+border-radius: 2px; -webkit-border-radius:2px; -moz-border-radius:2px;
+}
 
 /* editor's general field */
 .jqte {
 	margin:30px 0;
-	border:#000 1px solid;
+	border:#999 1px solid;
 	border-radius:5px; -webkit-border-radius:5px; -moz-border-radius:5px;
-	box-shadow:0 0 3px #999; -webkit-box-shadow:0 0 3px #999; -moz-box-shadow:0 0 3px #999;
 	overflow:hidden;
 	transition:box-shadow 0.4s, border 0.4s; -webkit-transition:-webkit-box-shadow 0.4s, border 0.4s; -moz-transition:-moz-box-shadow 0.4s, border 0.4s; -o-transition:-o-box-shadow 0.4s, border 0.4s;
 }
@@ -22,8 +30,7 @@
 	font-size:14px;
 }
 .jqte_focused {
-	border-color:#00AAE7;
-	box-shadow:0 0 10px #00BDFF; -webkit-box-shadow:0 0 10px #00BDFF; -moz-box-shadow:0 0 10px #00BDFF;
+	border-color:red;
 }
 /* toolbar */
 .jqte_toolbar {
