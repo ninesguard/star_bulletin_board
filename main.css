@@ -3,16 +3,10 @@ Styling for STAR Lab digital sign
 by Taylor Nelson (Nine's Guard) 
 */
 
-
-/* Ctrl + F to change...
-  
-  -webkit-animation      -   Change the timing for the marquees.
-
-  */
   
 body {
     background:url("img/background.png");
-    font:12pt 'Exo 2';
+    font:12pt 'Roboto Slab';
     margin:0;
     padding:0
 }
@@ -22,25 +16,19 @@ a {
     text-decoration:none
 }
 
-@font-face {
-    font-family:'weather';
-    src:url("w-font/weathericons-regular-webfont.eot");
-    src:url("w-font/weathericons-regular-webfont.eot?#iefix") format("embedded-opentype"),url("w-font/weathericons-regular-webfont.woff") format("woff"),url("w-font/weathericons-regular-webfont.ttf") format("truetype"),url("w-font/weathericons-regular-webfont.svg") format("svg");
-    font-weight:400;
-    font-style:normal
-}
+
 
 #weather {
     width:350px;
     padding:20px;
-    background:#590062;
-    border-radius:19px;
-    border:3px solid #bc14cb;
+    background:rgba(89,0,98,0.7);
+    border-radius:5px;
+    border:1px inset #bc14cb;
     position:absolute;
     top:49px;
     left:1400px;;
 /* 33 pixel "padding" */
-    text-shadow:2px 2px 3px #000;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
     -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
     box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75)
@@ -70,7 +58,7 @@ a {
 
 #weather #weather_text {
     text-align:left;
-    font:30px "Exo 2";
+    font:30px "Roboto";
     font-weight:lighter;
     color:#fff;
     padding:20px;
@@ -89,8 +77,8 @@ a {
     left:1284px;
     position:absolute;
     background:url("img/feed_back.png");
-    border-radius:19px;
-    border:3px solid #27700b;
+    border-radius:5px;
+    border:1px inset #27700b;
     padding:20px
 }
 
@@ -118,13 +106,13 @@ a {
     height:700px;
     width:350px;
     overflow:hidden;
-    background:#1d4b51;
+    background:rgba(29,75,81, 0.7);
     position:absolute;
     top:49px;
 /*-33 pixels */
     left:903px;
-    border-radius:19px;
-    border:3px solid #19b2c9;
+    border-radius:5px;
+    border:1px inset #19b2c9;
     padding-left:20px;
     padding-right:20px;
     padding-bottom:20px;
@@ -150,7 +138,7 @@ a {
 #hours_back {
     padding:10px;
     background:#fff;
-    border-radius:19px;
+    border-radius:5px;
     width:400px;
     padding-left:6px;
     padding-right:6px;
@@ -163,9 +151,9 @@ a {
 }
 
 #hours {
-    border-radius:19px;
+    border-radius:5px;
     background:#9A2222;
-    border:3px #9a2222 solid;
+    border:1px #9a2222 inset;
     text-align:center;
     padding:11px;
 	font-weight: bold;
@@ -195,12 +183,14 @@ padding-left:50px;
     padding-top:35px;
     padding-bottom:35px;
     color:#fff;
-    border-radius:19px;
+    border-radius:5px;
     background:url("img/clock_back.png");
     text-shadow:2px 2px 3px #000;
     -webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
     -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
     box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+	font-family: "Roboto";
+	font-weight:lighter;
 }
 
 .clock_date_announce {
@@ -296,13 +286,17 @@ padding-left:50px;
     display:block;
     height:90px;
     padding-top:20px;
-    background:#1c4e08;
+    background:rgba(28,78,8, 0.7);
     color:#fff;
     z-index:999;
     position:relative;
     -moz-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
     -webkit-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
-    box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9)
+    box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
+	margin-left: -19px;
+	margin-right: -19px;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 #twitter-club-back-header h2 {
@@ -311,7 +305,7 @@ padding-left:50px;
 }
 
 #twitter-club-header h3 {
-    display:inline
+    display:inline;
 }
 
 #twitter-club-header h2,h3 {
@@ -322,12 +316,12 @@ padding-left:50px;
     height:545px;
     width:350px;
     overflow:hidden;
-    background:#1c4e08;
+    background:rgba(28,78,8, 0.7);
     position:absolute;
     top:447px;
     left:1400px;
-    border-radius:19px;
-    border:3px solid #5BB03A;
+    border-radius:5px;
+    border:1px inset #5BB03A;
     padding-left:20px;
     padding-right:20px;
     padding-bottom:20px;
@@ -351,13 +345,17 @@ padding-left:50px;
     display:block;
     height:90px;
     padding-top:20px;
-    background:#1d4b51;
+    background:rgba(29,75,81, 0.8);
     color:#fff;
     z-index:999;
     position:relative;
     -moz-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
     -webkit-box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
-    box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9)
+    box-shadow:inset 0 11px 5px -5px rgba(0,0,0,0.9);
+	margin-left: -19px;
+	margin-right: -19px;
+	padding-right: 15px;
+	padding-left: 15px;
 }
 
 #twitter-back-header h2 {
@@ -408,10 +406,20 @@ padding-left:50px;
 	position: relative;
 	white-space: nowrap;
 	overflow: hidden;
-	background:#000;
-    border-radius:19px;
-    
-    border:3px solid #fff;
+	background: repeating-linear-gradient(
+		45deg,
+		rgba(0, 0, 0, 0.4),
+		rgba(0, 0, 0, 0.4) 10px,
+		rgba(0, 0, 0, 0.3) 10px,
+		rgba(0, 0, 0, 0.3) 20px
+		),
+	url(img/clock_back.png);
+    border-radius:5px;
+    font-family: "Roboto Mono";
+	-webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    border:1px inset red;
     font-size:63px;
 	
 }
@@ -425,6 +433,7 @@ padding-left:50px;
 	padding-left: 100%;
 	color:red;
 	text-indent: 0;
+	font-family: "Roboto Mono";
 	animation: horizontal_marquee 15s linear infinite; /* You can adjust the timing on here as well */
 	-webkit-animation: horizontal_marquee 15s linear infinite; 
 }
@@ -501,7 +510,7 @@ padding-left:50px;
 }
 
 #logo{
-top: 60px; left: 0px; position: absolute;
+top: 60px; left: 60px; position: absolute;
 }
 #hours h1 {
 text-decoration: underline;
@@ -510,8 +519,9 @@ text-decoration: underline;
 float: left; width: 76px; padding-right: 15px;
 }
 .twitter_logo{
-width: 22px; height: 22px; float: right;
+width: 16px; height: 16px; float: right; opacity: 0.5 !important;
 }
+
 /* Actual TV size, this will display a red border in the actual viewable area. */
 #tv_margins {
 position: absolute;

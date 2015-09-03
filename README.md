@@ -5,4 +5,4 @@ Uses HTML, CSS, JavaScript and JQuery to display important information pertainin
 
 Now with easy setup screen!
 
-Note: I do not take any credit for anything in the scripts folder, unless it has my alias in it (ninesguard)
+Note: I do not take any credit for anything in the scripts or w-font folder, unless it has my alias in it (ninesguard), or my name (Taylor Nelson)

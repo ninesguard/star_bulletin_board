@@ -25,10 +25,12 @@ document.getElementById("btnRecover").addEventListener("click", recover, false);
 document.getElementById("btnRun").addEventListener("click", run, false);
 document.getElementById("default_p1").addEventListener("click", defaultp1, false);
 document.getElementById("default_p2").addEventListener("click", defaultp2, false);
-
+document.getElementById("default_p3").addEventListener("click", defaultp3, false);
 
 recover();
-
+defaultp1();
+defaultp2();
+defaultp3();
 }
 
 function recoverFile() {
@@ -36,7 +38,7 @@ function recoverFile() {
 
 function recover() {
 document.getElementById("marquee").value = localStorage.getItem("marquee");
-//document.getElementById("background").value = localStorage.getItem("background");
+document.getElementById("background").value = localStorage.getItem("background");
 document.getElementById("note-editor-1").innerHTML = localStorage.getItem("postit1");
 document.getElementById("note-editor-2").innerHTML = localStorage.getItem("postit2");
 document.getElementById("note-editor-3").innerHTML = localStorage.getItem("announcements");
@@ -54,7 +56,7 @@ document.getElementById("announce_timer").value = localStorage.getItem("announce
 
 function save() {
 localStorage.setItem("marquee", document.getElementById("marquee").value);
-//localStorage.setItem("background", document.getElementById("background").value);
+localStorage.setItem("background", document.getElementById("background").value);
 localStorage.setItem("postit1", document.getElementById("note-editor-1").innerHTML);
 localStorage.setItem("postit2", document.getElementById("note-editor-2").innerHTML);
 localStorage.setItem("announcements", document.getElementById("note-editor-3").innerHTML);
@@ -80,7 +82,10 @@ document.getElementById("note-editor-1").innerHTML = '<p style="font-size: 21px;
 }
 function defaultp2() {
 document.getElementById("note-editor-2").innerHTML = '<p style="font-size: 23px;">Our lab supports:</p><p style="font-size: 23px; color: blue;">Photoshop, Dreamweaver, Premiere, Flash, Final Cut Pro X, Avid, 3Ds Max, Unity, UDK, Maya, Audacity, and more!</p>';
- 
+}
+
+function defaultp3() {
+document.getElementById("note-editor-3").innerHTML = '<h3>Title <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul></h3>';
 }
 
 window.addEventListener("load", start, false); //add Event listener for this window, called start
@@ -94,7 +99,8 @@ window.addEventListener("load", start, false); //add Event listener for this win
 <form method="post" action="">
 Scrolling Marquee Messages<br>
 <input id="marquee" name="marquee" type="text" /><br><br>
-<!--<input id="background" name="background" type="text" /> --><br><br>
+Background Image  (only uses files in the "img" folder)<br>
+<input id="background" name="background" type="file" /><br><br>
 </fieldset>
 
 <fieldset>
@@ -137,8 +143,9 @@ Hours of operation<br>
 Timer (in seconds) for page<br>
 <input type="number" id="announce_timer" min="1" max="999" value="30"/><br><br>
 Announcements<br>
+<input id="default_p3" type="button" value="Default text" />
 <div class="announcement_edit" style="border: 5px solid black;">
-<div id="announcements" name="announcements" type="text" >Select text to edit.</div></div><br><br>
+<div id="announcements" name="announcements" type="text" ><br>Select text to edit.</div></div><br><br>
 </fieldset>
 
 
