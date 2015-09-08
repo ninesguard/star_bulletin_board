@@ -38,7 +38,7 @@ function recoverFile() {
 
 function recover() {
 document.getElementById("marquee").value = localStorage.getItem("marquee");
-document.getElementById("background").value = localStorage.getItem("background");
+//document.getElementById("background").value = localStorage.getItem("background");
 document.getElementById("note-editor-1").innerHTML = localStorage.getItem("postit1");
 document.getElementById("note-editor-2").innerHTML = localStorage.getItem("postit2");
 document.getElementById("note-editor-3").innerHTML = localStorage.getItem("announcements");
@@ -78,14 +78,14 @@ window.location.href = 'tv.html';
 }
 
 function defaultp1() {
-document.getElementById("note-editor-1").innerHTML = '<p style="font-size: 21px;">Reserve equipment ONLINE</p><p style="font-size:29px; color: red;">gmu.webcheckout.net</p><p style="font-size: 22px;">or give us a call:</p><p style="color: red; font-size: 41px;">703-993-8990</p>';
+document.getElementById("note-editor-1").innerHTML = '<p style="font-size: 21px;">Reserve equipment ONLINE</p><p style="font-size: 29px;"><span style="color: rgb(255, 0, 0);"><span style="background-color: inherit;">gmu.webcheckout.net</span></span></p><p style="font-size: 22px;">or give us a call:</p><p style="font-size: 41px;"><span style="color: rgb(255, 0, 0);"><span style="background-color: inherit;">703-993-8990</span></span></p>';
 }
 function defaultp2() {
-document.getElementById("note-editor-2").innerHTML = '<p style="font-size: 23px;">Our lab supports:</p><p style="font-size: 23px; color: blue;">Photoshop, Dreamweaver, Premiere, Flash, Final Cut Pro X, Avid, 3Ds Max, Unity, UDK, Maya, Audacity, and more!</p>';
+document.getElementById("note-editor-2").innerHTML = '<p style="font-size: 23px;">Our lab supports:</p><p style="font-size: 23px;"><span style="color: rgb(255, 0, 0);">Photoshop, Dreamweaver, Premiere, Flash, Final Cut Pro X, Avid, 3Ds Max, Unity, UDK, Maya, Audacity, and more!</span></p>';
 }
 
 function defaultp3() {
-document.getElementById("note-editor-3").innerHTML = '<h3>Title <ul><li>Item 1</li><li>Item 2</li><li>Item 3</li></ul></h3>';
+document.getElementById("note-editor-3").innerHTML = '<h1>Current Announcements</h1><h5><ul><li>Regular Lab Hours start August 31st: <ul><li>10am - 10pm | Monday - Thursday</li><li>10am - 6pm | Friday</li><li>Saturday | Closed</li><li>12pm - 6pm | Sunday</li></ul><li>Try out our new At-Home checkout system at: gmu.webcheckout.net</li></ul></h5>';
 }
 
 window.addEventListener("load", start, false); //add Event listener for this window, called start

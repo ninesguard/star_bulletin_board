@@ -8,7 +8,8 @@ body {
     background:url("img/background.png");
     font:12pt 'Roboto Slab';
     margin:0;
-    padding:0
+    padding:0;
+	background-size: 1920px 1080px;
 }
 
 a {
@@ -21,7 +22,7 @@ a {
 #weather {
     width:350px;
     padding:20px;
-    background:rgba(89,0,98,0.7);
+    background:rgba(89,0,98,0.5);
     border-radius:5px;
     border:1px inset #bc14cb;
     position:absolute;
@@ -44,7 +45,7 @@ a {
     display:block;
     width:150px;
     text-align:center;
-    margin-top:50px
+    margin-bottom:40px
 }
 
 
@@ -66,7 +67,8 @@ a {
 }
 
 #weather .currently {
-    margin:0 20px
+	background:rgba(89,0,98,0.5);
+    margin:-20px;
 }
 
 #feed_container {
@@ -130,11 +132,38 @@ a {
 /*CSS YOU'RE SO OP */
     animation:marquee 99s linear infinite;
 /*CSS YOU'RE SO OP */
-    z-index:10
+    z-index:10;
+	opacity: 1.0 !important;
+	
+}
+#twitter-feed ul, #twitter-club-feed ul {
+	list-style: none;
+	color: white;
+	margin: 0;
+	padding: 0;
+	
 }
 
+div.user img{
+float: left;
+}
+div.user span{
+font-size: 14px;
+}
 
+div.user span:first-child {
+font-size: 18px;
+font-weight: bold;
+display: block;
+}
 
+div.tweet {
+float: right;
+}
+
+.timePosted {
+border-bottom: 1px rgba(255,255,255,0.7) solid;
+}
 #hours_back {
     padding:10px;
     background:#fff;
@@ -164,7 +193,7 @@ a {
 }
 
 #hours td {
-    font-size:155%;
+    font-size:140%;
 	background: white;
 	border-radius: 3px;
 	text-align: left;
@@ -185,7 +214,7 @@ padding-left:50px;
     color:#fff;
     border-radius:5px;
     background:url("img/clock_back.png");
-    text-shadow:2px 2px 3px #000;
+    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
     -webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
     -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
     box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
@@ -368,35 +397,44 @@ padding-left:50px;
 
 #sticky_a,#sticky_b {
     height:260px;
-    width:290px;
+    width:320px;
     position:relative;
     padding:10px;
-    margin:20px;
-    font-family:'Gloria Hallelujah',cursive
+    font-family:'Roboto Slab';
+	text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+	color: white;
 }
 
 #sticky_a p,#sticky_b p {
     margin:0;
     padding:0;
     line-height:auto;
-    font-size:21px
+
 }
 
 #sticky_a {
-    background:url("img/green_sticky.png");
+	text-align: center;
+    background: rgba(84,232,101, 0.7);
+	border: 1px rgba(84,232,101, 0.7) inset;
     background-repeat:repeat-x;
-    box-shadow:3px 3px 8px #151515;
     display:block;
     position:absolute;
-    left:92px;
+    left:82px;
     top:470px;
-/*rotate sticky */
+	-webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+	/*
+/*rotate sticky 
     -ms-transform:rotate(1deg);
-/* IE 9 */
+	*/
+/* IE 9 
     -webkit-transform:rotate(1deg);
-/* Chrome, Safari, Opera */
+	*/
+/* Chrome, Safari, Opera 
     transform:rotate(1deg);
     -webkit-backface-visibility:hidden;
+	*/
 }
 
 .notice, .notice_large {
@@ -414,7 +452,6 @@ padding-left:50px;
 		rgba(0, 0, 0, 0.3) 20px
 		),
 	url(img/clock_back.png);
-    border-radius:5px;
     font-family: "Roboto Mono";
 	-webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
     -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
@@ -493,20 +530,25 @@ padding-left:50px;
 }
 
 #sticky_b {
-    background:url("img/yellow_sticky.png");
+    background: rgba(0, 191, 255, 0.7);
     background-repeat:repeat-x;
     display:block;
+	text-align: center;
+	border: 1px rgba(0, 191, 255, 0.6) inset;
     box-shadow:3px 3px 8px #151515;
     position:absolute;
     left:487px;
     top:470px;
-/*rotate sticky */
-    -ms-transform:rotate(-3deg);
-/* IE 9 */
-    -webkit-transform:rotate(-3deg);
-/* Chrome, Safari, Opera */
+	-webkit-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+    box-shadow:inset 0 0 5px 3px rgba(0,0,0,0.75);
+/*rotate sticky
+    -ms-transform:rotate(-3deg); */
+/* IE 9 
+    -webkit-transform:rotate(-3deg); */
+/* Chrome, Safari, Opera 
     transform:rotate(-3deg);
-    -webkit-backface-visibility:hidden
+    -webkit-backface-visibility:hidden */
 }
 
 #logo{
@@ -522,6 +564,10 @@ float: left; width: 76px; padding-right: 15px;
 width: 16px; height: 16px; float: right; opacity: 0.5 !important;
 }
 
+.media img {
+height: 150px;
+}
+
 /* Actual TV size, this will display a red border in the actual viewable area. */
 #tv_margins {
 position: absolute;
@@ -532,17 +578,18 @@ width: 1850px;
 border: red solid 1px;
 }
 #announce_logo {
-margin-top:100px; left: 0px;  z-index: -999;}
+margin-top:100px; padding-left:25px;  z-index: -999;
+}
 
 #announcements_page {
 margin-left: 40px;
 }
 
 #announcements {
-background: white; padding: 10px 10px 10px 65px; margin-left: -60px; width: 100%;
+background: white; padding: 10px 10px 10px 55px;  width: 1760px;
 }
 #announcements h1 {
 color: red; margin: 30px; font-size: 39px}
 #announcements ul {
-font-size: 39px; margin: 30px; font-weight: bold;
+font-size: 22px; margin: 10px; font-weight: bold;
 }

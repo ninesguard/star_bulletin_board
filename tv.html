@@ -81,7 +81,7 @@ width="345"
 height="10000"
 data-chrome="noheader noborders noscrollbar nofooter transparent" 
 			data-widget-id="524285797730500608">Tweets by @CLUBGMU</a>
-            <script src="scripts/twitter.js"></script>
+
 </div>
 </div>          
 
@@ -108,7 +108,6 @@ href="https://twitter.com/MasonSTARLab"
 data-widget-id="513334187860832257"
 >Tweets by @MasonSTARLab</a>
 <!--Twitter script-->
-<script src="scripts/twitter.js"></script>
 </div>
 </div>
 
@@ -150,7 +149,7 @@ function getWeather() {
     success: function(weather) {
 	  
       html = '<i class="icon-'+weather.code+'"></i>';
-      html += '<div id="weather_text"><h2>'+weather.temp+'&deg;</h2>'+weather.city+', '+weather.region+'</div>';
+      html += '<div id="weather_text" class="currently"><h2>'+weather.temp+'&deg;</h2>'+weather.city+', '+weather.region+'</div>';
 	  html += '<div id="weather_forecast">';
 	  for (var i=1;i<weather.forecast.length;i++) {
 		html += '<div class="forecast"><div class="day">'+weather.forecast[i].day+'</div><i class="icon-'+weather.forecast[i].code+'"></i><div class="high_tmp">'+weather.forecast[i].high+'&deg;</div>/<div class="low_tmp">'+weather.forecast[i].low+'&deg;</div></div>';
@@ -184,5 +183,7 @@ body.style.backgroundImage = "url(img/" + localStorage.getItem("background") + "
 </script>
 <!-- Clock widget -->
 <script src="scripts/clock.js"></script>
+<!-- twitter widget -->
+<script src="scripts/twitter.js"></script>
 </body>
 </html>
