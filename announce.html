@@ -50,6 +50,7 @@ var $next_page = "tv.html";
 <script>
 document.getElementById("marquee").innerHTML = localStorage.getItem("marquee");
 document.getElementById("announcements").innerHTML = localStorage.getItem("announcements");
+document.getElementById("marquee").setAttribute("style", "animation: horizontal_marquee " + localStorage.getItem("marquee_timer") + "s linear infinite; -webkit-animation: horizontal_marquee " + localStorage.getItem("marquee_timer") + "s linear infinite; ");
 
 var body = document.getElementsByTagName("body")[0];
 body.style.backgroundImage = "url(img/" + localStorage.getItem("background") + ")";

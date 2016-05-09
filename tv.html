@@ -129,11 +129,6 @@ var $next_page = "announce.html";
 <!-- Used for development on another PC, please comment out when finished -->
 <!-- <div id="tv_margins"></div> -->
 
-<!--JQuery Twitter Widget Stylization-->
-<!--found here: http://www.lukeharrison.net/blog/styling-your-twitter-widget/-->
-<!--Modified by Nine's Guard-->
-<script src="scripts/stylize.twitter.js"></script>
-
 
 <!-- Weather Widget -->
 <script src="scripts/jquery.simpleWeather.min.js"></script>
@@ -151,7 +146,7 @@ function getWeather() {
       html = '<i class="icon-'+weather.code+'"></i>';
       html += '<div id="weather_text" class="currently"><h2>'+weather.temp+'&deg;</h2>'+weather.city+', '+weather.region+'</div>';
 	  html += '<div id="weather_forecast">';
-	  for (var i=1;i<weather.forecast.length;i++) {
+	  for (var i=1;i<5;i++) {
 		html += '<div class="forecast"><div class="day">'+weather.forecast[i].day+'</div><i class="icon-'+weather.forecast[i].code+'"></i><div class="high_tmp">'+weather.forecast[i].high+'&deg;</div>/<div class="low_tmp">'+weather.forecast[i].low+'&deg;</div></div>';
       }
 	  html += '</div>';
@@ -167,6 +162,7 @@ function getWeather() {
 </script>
 <script>
 document.getElementById("marquee").innerHTML = localStorage.getItem("marquee");
+document.getElementById("marquee").setAttribute("style", "animation: horizontal_marquee " + localStorage.getItem("marquee_timer") + "s linear infinite; -webkit-animation: horizontal_marquee " + localStorage.getItem("marquee_timer") + "s linear infinite; ");
 document.getElementById("sticky_a").innerHTML = localStorage.getItem("postit1");
 document.getElementById("sticky_b").innerHTML = localStorage.getItem("postit2");
 document.getElementById("c1r1").innerHTML = localStorage.getItem("c1r1");
@@ -184,6 +180,6 @@ body.style.backgroundImage = "url(img/" + localStorage.getItem("background") + "
 <!-- Clock widget -->
 <script src="scripts/clock.js"></script>
 <!-- twitter widget -->
-<script src="scripts/twitter.js"></script>
+<script src="scripts/twitterFetch.js"></script>
 </body>
 </html>

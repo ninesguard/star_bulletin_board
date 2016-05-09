@@ -162,8 +162,44 @@ float: right;
 }
 
 .timePosted {
-border-bottom: 1px rgba(255,255,255,0.7) solid;
+	text-align: right;
+	clear: both;
+	font-size: 11px;
 }
+
+.media {
+}
+
+.user {
+	float: left;
+	background-color: rgba(255,255,255,0.2);
+	width: 100%;
+}
+
+.user a span {
+	font-size: 22px;
+	display: inline !important;
+	clear: both;
+}
+
+.user a span div {
+	display: none !important;
+}
+
+.user div a span img {
+	padding-right: 10px;
+}
+
+.tweet {
+	float: left;
+}
+
+#twitter-feed li, #twitter-club-feed li {
+	margin-top: 25px !important;
+	padding-top: 25px !important;
+	border-bottom: 1px solid white; 
+}
+
 #hours_back {
     padding:10px;
     background:#fff;
@@ -401,7 +437,6 @@ padding-left:50px;
     position:relative;
     padding:10px;
     font-family:'Roboto Slab';
-	text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
 	color: white;
 }
 
@@ -414,7 +449,7 @@ padding-left:50px;
 
 #sticky_a {
 	text-align: center;
-    background: rgba(84,232,101, 0.7);
+    background: rgba(84,232,101, 0.9);
 	border: 1px rgba(84,232,101, 0.7) inset;
     background-repeat:repeat-x;
     display:block;
@@ -471,8 +506,6 @@ padding-left:50px;
 	color:red;
 	text-indent: 0;
 	font-family: "Roboto Mono";
-	animation: horizontal_marquee 15s linear infinite; /* You can adjust the timing on here as well */
-	-webkit-animation: horizontal_marquee 15s linear infinite; 
 }
 
 /* Make it move! */
@@ -530,7 +563,7 @@ padding-left:50px;
 }
 
 #sticky_b {
-    background: rgba(0, 191, 255, 0.7);
+    background: rgba(0, 191, 255, 0.9);
     background-repeat:repeat-x;
     display:block;
 	text-align: center;
